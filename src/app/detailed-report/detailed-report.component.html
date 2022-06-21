@@ -1,0 +1,34 @@
+<app-loader></app-loader>
+<mat-toolbar class="navbar">
+    <p class="heading">NTA</p>
+    <span class="spacer"></span>
+    <button class="titleButton" routerLink="">Home</button>
+    <button class="titleButton" routerLink="/anlysis-report">Scan Report</button>
+  </mat-toolbar>
+  <div class="table-header">
+    <h1>Detailed Report</h1>
+</div>
+<div class="offline" *ngIf="noData">You're offline!</div>
+<div class="card-body" *ngIf="noData">
+    <p>Try connecting to a network and try again !</p>
+</div>
+<div class="table-container" *ngIf="noData == false">
+<table class="details-table">
+    <thead>
+    <tr>
+        <th>Internet Address</th>
+        <th>Physical Address</th>
+        <th>Type</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let data of tableData">
+      <td>{{ data.ip }}</td>
+      <td>{{ data.mac }}</td>
+      <td>{{ data.type}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    
+<img src="../../../../../assets/hero.png" width="100%;"/>

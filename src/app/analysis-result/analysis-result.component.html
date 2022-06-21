@@ -1,0 +1,43 @@
+<app-loader></app-loader>
+
+<mat-toolbar class="navbar">
+    <p class="heading">NTA</p>
+    <span class="spacer"></span>
+    <button class="titleButton" routerLink="">Home</button>
+    <button class="titleButton" routerLink="anlysis-report">Scan Report</button>
+  </mat-toolbar>
+
+<div class="card-header">
+    <p>Network Traffic Analysis</p>
+</div>
+<div class="offline" *ngIf="noData">You're offline!</div>
+<div class="card-body" *ngIf="noData">
+    <p>Try connecting to a network and try again !</p>
+</div>
+<div *ngIf="noData == false">
+<div class="card-body justify-content-center" *ngIf="status == 0">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <div class="txt">
+            <p>No pocket sniffer found. Your Computer is good to go !</p>
+        </div>
+</div>
+</div>
+<div *ngIf="noData == false">
+<div class="card-body justify-content-center" *ngIf="status == 1 || status == 2">
+    <svg class="crossmark addClass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+        <circle class="crossmark__circle addClass" cx="26" cy="26" r="25" fill="none"/>
+        <path class="cross__path cross__path--right addClass" fill="none" d="M16,16 l20,20" />
+        <path class="cross__path cross__path--left addClass" fill="none" d="M16,36 l20,-20" />
+    </svg>
+        <div class="txt">
+            <p>Oops! Your data might be at risk. Try disconnecting your network.</p>
+        </div>
+</div>
+</div>
+<div class="card-footer">
+    <button class="btn" routerLink="/view-details">View&nbsp;Details</button>
+</div>
+<img src="../../../../../assets/hero.png" width="100%;"/>

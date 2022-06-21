@@ -1,0 +1,217 @@
+
+.card-header {
+    font-size: 3.7rem;
+    font-weight: bold;
+    font-family: cerebri sans, sans-serif;
+    color: #343A40;
+    display: flex;
+    justify-content: center;
+    height: 130px;
+    align-items: flex-end;
+    p{
+      margin: 0 0 0 20px !important; 
+    }
+  }
+  .card-body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Mandali, sans-serif;
+      color: #6c757d;
+      text-align: center;
+      margin-top: 55px;
+      font-size: 1.5em;
+      p{
+          line-height: 30px;
+      }
+   }
+   .card-footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .btn{
+      font-family: Mandali, sans-serif;
+      font-size: 18px;
+      background-color: #1CE1AC;
+      text-align: center;
+      border: none;
+      height: 50px;
+      width: 150px;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 25px;
+      cursor: pointer;
+   }
+
+.txt{
+    margin-left: 20px;
+}
+
+$green: #7ac142;
+$white: #fff;
+$curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: $white;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px $green;
+  animation: fill .6s ease-in-out .6s forwards, scale .5s ease-in-out .11s both;
+  animation-delay: 10.4s;
+
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: $green;
+  fill: none;
+  animation: stroke .8s $curve forwards;
+  animation-delay: 10.4s;
+
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .5s $curve .11s forwards;
+  animation-delay: 10.4s;
+
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px $green;
+  }
+}
+
+.crossmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #ff0000;
+    fill: none;
+   animation: stroke 0.8s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  //  animation-delay: 10.4s;
+
+  }
+  
+  .crossmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #ff0000;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #ff0000;
+    animation: fillred .6s ease-in-out .6s forwards, scale .5s ease-in-out .11s both;
+    // animation-delay: 10.4s;
+
+  }
+  
+  .crossmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.11s forwards;
+    // animation-delay: 10.4s;
+
+  }
+  
+  .cross__path {
+    stroke: #ffffff;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    transform-origin: 50% 50% 0;
+  }
+  .cross__path--right {
+    animation: 0.5s ease 0.11s normal forwards 1 running stroke;
+  }
+  .cross__path--left {
+    animation: 1s ease 0.11s normal forwards 1 running stroke;
+  }
+  @keyframes fillred {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #ff0000;
+    }
+    
+  }
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+
+  mat-toolbar{
+    background-color:#fff;
+    color: #343A40;
+    padding: 20px 100px 0 200px;
+    height: 70px;
+    .heading{
+      font-size: 25px;
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bolder;
+    }
+ }
+ 
+ .titleButton{
+    color: #6c757d;
+    background-color: #fff; 
+    font-size: 17px;
+    font-weight: 300;
+    border: none;
+    margin-left: 30px;
+    font-family: Mandali, sans-serif;
+ }
+ 
+ .titleButton:hover{
+    cursor: pointer;
+    color: #1CE1AC;
+ }
+ 
+ .spacer {
+    flex: 1 1 auto;
+  }
+ 
+  .offline{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 80px;
+    font-size: 30px;
+    color: red;
+   }

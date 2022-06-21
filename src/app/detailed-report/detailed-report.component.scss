@@ -1,0 +1,92 @@
+ 
+  mat-toolbar{
+    background-color:#fff;
+    color: #343A40;
+    padding: 20px 100px 0 200px;
+    height: 70px;
+    .heading{
+      font-size: 25px;
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bolder;
+    }
+ }
+ 
+ .titleButton{
+    color: #6c757d;
+    background-color: #fff; 
+    font-size: 17px;
+    font-weight: 300;
+    border: none;
+    margin-left: 30px;
+    font-family: Mandali, sans-serif;
+ }
+ 
+ .titleButton:hover{
+    cursor: pointer;
+    color: #1CE1AC;
+ }
+ 
+ .spacer {
+    flex: 1 1 auto;
+  }
+ 
+  .table-container{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   td{
+      padding-left: 20px;   
+      padding-top: 5px;
+      padding-bottom: 10px;
+   }
+   th{
+      text-align: left;
+      padding-left: 20px;   
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
+  }
+  .details-table{
+      width: 60%;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #343A40;
+      border-radius: 5px;
+      font-family:monospace;
+      font-size: 17px;
+  }
+
+  .table-header{
+   display: flex;
+   justify-content: center;
+   color: #343A40;
+   background-color: #fff; 
+   font-size: 10px;
+   font-weight: 300;
+   font-family: Mandali, sans-serif;
+   margin-top: 50px;
+  }
+
+  .offline{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   padding-top: 50px;
+   font-size: 30px;
+   color: red;
+  }
+
+  .card-body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: Mandali, sans-serif;
+   color: #6c757d;
+   text-align: center;
+   margin-top: 45px;
+   margin-bottom: 45px;
+   font-size: 1.5em;
+   p{
+       line-height: 30px;
+   }
+}

@@ -1,0 +1,15 @@
+<div [ngClass]="{ hidden: loaderTime }">
+<div
+class="d-flex justify-content-center align-items-center bg-light spinner"
+>
+<div class="ocrloader" *ngIf="loaderTime == false">
+    <em></em>
+    <div>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i>
+    </div>
+    <span></span>
+  </div>
+</div>
+</div>
